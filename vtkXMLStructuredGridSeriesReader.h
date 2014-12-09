@@ -13,6 +13,7 @@ class vtkXMLStructuredGridSeriesReader : public vtkXMLStructuredGridReader {
         void SetFiles(int nmb_, char ** fnames_);
         void Next();
         void Previous();
+        void Select(int);
 
     private:
         char ** fnames;

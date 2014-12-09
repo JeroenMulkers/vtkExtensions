@@ -23,3 +23,11 @@ void vtkXMLStructuredGridSeriesReader::Previous(){
     this->SetFileName(fnames[selected]);
     std::cout << fnames[selected] << std::endl;
 }
+
+void vtkXMLStructuredGridSeriesReader::Select(int i){
+    if (i>=0 && i<nmb) {
+        selected = i;
+        this->SetFileName(fnames[selected]);
+    }
+    std::cout << fnames[selected] << std::endl;
+}
